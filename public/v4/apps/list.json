@@ -1,0 +1,9 @@
+[
+  {
+    "name": "Twenty CRM",
+    "description": "Self-hosted CRM",
+    "isOfficial": false,
+    "baseUrl": "https://raw.githubusercontent.com/arrfonseca/one-click-apps/master/public/v4/apps/",
+    "file": "twenty-crm.json"
+  }
+]
