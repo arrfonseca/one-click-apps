@@ -2,14 +2,14 @@
   "captainVersion": "4",
   "documentation": "https://twenty.com/developers/section/self-hosting/docker-compose",
   "displayName": "Twenty CRM",
-  "description": "Self-hosted open-source CRM platform built for teams",
-  "instructions": "Make sure to provide a working PostgreSQL and Redis URL. You can update secrets after deployment in App Config.",
+  "description": "Fully self-hosted CRM platform with frontend + backend",
+  "instructions": "Ensure your PostgreSQL and Redis URLs are reachable. You can define ENV variables later if needed.",
   "variables": [
     {
       "id": "app_secret",
       "label": "APP_SECRET",
       "defaultValue": "$$cap_gen_random_hex(32)",
-      "description": "Secret key used for app encryption"
+      "description": "Secret key used by the backend"
     },
     {
       "id": "pg_url",
@@ -27,11 +27,12 @@
       "id": "server_url",
       "label": "SERVER_URL",
       "defaultValue": "https://$$cap_appname.$$cap_root_domain",
-      "description": "Public URL of your app"
+      "description": "Public URL of the application"
     }
   ],
-  "dockerfileLines": [
-    "FROM twentycrm/twenty:v0.50.9"
-  ],
-  "containerHttpPort": "3000"
+  "services": [],
+  "dockerComposeFile": "./docker-compose.yml",
+  "caproverOneClickParams": {
+    "containerHttpPort": "80"
+  }
 }
