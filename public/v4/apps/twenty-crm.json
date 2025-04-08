@@ -1,0 +1,17 @@
+{
+  "captainVersion": "4",
+  "displayName": "Twenty CRM",
+  "description": "Self-hosted open-source CRM",
+  "instructions": "Configure your environment variables after deploy.",
+  "variables": [
+    {
+      "id": "app_secret",
+      "label": "APP_SECRET",
+      "defaultValue": "$$cap_gen_random_hex(32)"
+    }
+  ],
+  "dockerfileLines": [
+    "FROM twentycrm/twenty:v0.50.9"
+  ],
+  "containerHttpPort": "3000"
+}
