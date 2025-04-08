@@ -31,7 +31,7 @@
     }
   ],
   "services": [],
-  "dockerComposeFile": "./docker-compose.yml",
+  "dockerComposeFile": "https://raw.githubusercontent.com/arrfonseca/one-click-apps/master/apps/twenty-crm/docker-compose.yml",
   "caproverOneClickParams": {
     "containerHttpPort": "80"
   }
